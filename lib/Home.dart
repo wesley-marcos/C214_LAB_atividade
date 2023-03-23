@@ -12,9 +12,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  late final _controller = TextEditingController();
-  String text = '';
-
   @override
   Widget build(BuildContext context) {
 
@@ -75,53 +72,19 @@ class _HomeState extends State<Home> {
 
             const SizedBox(
               width: 20,
-              height: 40,
+              height: 80,
             ),
 
-            TextFormField(
-              onChanged: (String string){
-                setState(() {
-                  text = string;
-                });
-              },
-              controller: _controller,
-              keyboardType: TextInputType.phone,
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: Colors.lightGreen,
-                        width: 5.0
-                    )
-                ),
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.0)
-                ),
-                labelText: "Input",
-                labelStyle: TextStyle(
-                    color: Colors.amber,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 35),
-              ),
-              style: GoogleFonts.aladin(
-                  fontSize: 20,
-                  color: Colors.amber
-              ),
-            ),
-
-            const SizedBox(
-              width: 20,
-              height: 40,
-            ),
-
-            //Coments rep2dadfdEFEW
             Container(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.center,
               child: OutlinedButton(
-                onPressed: (){},
+                onPressed: (){
+                  aviso(context);
+                },
                 child: Text(
-                  "Output: ${_controller.text}",
+                  "Obs",
                   style: GoogleFonts.aladin(
-                      fontSize: 35,
+                      fontSize: 50,
                       color: Colors.amber
                   ),
                 ),
@@ -132,4 +95,41 @@ class _HomeState extends State<Home> {
       )
     );
   }
+}
+
+void aviso(BuildContext context) {
+  var alertDialog = const AlertDialog(
+    title: const Text("Uma mensagem foi enviada com sucesso"),
+  );
+
+  showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        Future.delayed(const Duration(seconds: 2), () {});
+
+        return Dialog(
+          backgroundColor: Colors.blueAccent,
+          shape:
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+          insetAnimationDuration: const Duration(seconds: 1),
+          child: Container(
+            height: 200.0,
+            child: Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text('Atividade Git Parte 2   :)',
+                      style: GoogleFonts.notoSans(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      )),
+                ],
+              ),
+            ),
+          ),
+        );
+      });
 }
