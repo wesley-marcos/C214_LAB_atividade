@@ -1,16 +1,20 @@
-# atv_2
+# Atividade 4
 
-A new Flutter project.
+Criar uma nova funcionalidade (em uma nova branch) e fazero merge para a brabch master.
 
-## Getting Started
+## Nota
 
-This project is a starting point for a Flutter application.
+Essa atividade foi realizada para fins didáticos do laboratório de C214.
 
-A few resources to get you started if this is your first Flutter project:
+Tela inicial:
+<br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<h1 align="center">
+    <img align="center" src="src\assets\tela_inicial.jpg" width="300px;" alt="tela_inicial"/>
+</h1>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Tela secundária:
+
+<h1 align="center">
+    <img align="center" src="src\assets\tela_secundaria.jpg" width="300px;" alt="tela_secundaria"/>
+</h1>
