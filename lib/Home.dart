@@ -116,13 +116,16 @@ class _HomeState extends State<Home> {
             //Coments e'
             Container(
               alignment: Alignment.centerLeft,
-              child: Text(
-                "Output: ${_controller.text}",
-                style: GoogleFonts.aladin(
-                    fontSize: 35,
-                    color: Colors.amber
+              child: OutlinedButton(
+                onPressed: (){},
+                child: Text(
+                  "Output: ${_controller.text}",
+                  style: GoogleFonts.aladin(
+                      fontSize: 35,
+                      color: Colors.amber
+                  ),
                 ),
-              ),
+              )
             ),
           ],
         ),
